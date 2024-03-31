@@ -227,3 +227,65 @@ const binaryTriangle = (n) => {
 // 1    1
 // 12  21
 // 123321
+const noCrownPattern = (n) => {
+  let space = 2 * (n - 1);
+  for (let i = 1; i <= n; i++) {
+    let horizontalStr = "";
+    //print number
+    for (let j = 1; j <= i; j++) {
+      horizontalStr += j;
+    }
+
+    //print space
+
+    for (let s = 1; s <= space; s++) {
+      horizontalStr += " ";
+    }
+    space -= 2;
+
+    //print number
+    for (let j = i; j >= 1; j--) {
+      horizontalStr += j;
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+};
+
+// noCrownPattern(3);
+
+//Q15 Increasing No Triangle Patter
+const increasingNoTrianglePatter = (n) => {
+  let noToBePrinted = 1;
+  let horizontalStr = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      horizontalStr += noToBePrinted;
+      noToBePrinted++;
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+};
+// increasingNoTrianglePatter(5);
+
+// Q16 Increasing Letter Triangle Pattern
+// A
+// A B
+// A B C
+
+const increasingLetterTrianglePattern = (n) => {
+  let ascii = "A".charCodeAt(0);
+  let horizontalStr = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      let letterToBePrinted = String.fromCharCode(ascii);
+      horizontalStr += letterToBePrinted;
+      ascii++;
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+};
+
+increasingLetterTrianglePattern(3);
