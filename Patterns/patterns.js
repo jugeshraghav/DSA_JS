@@ -289,3 +289,6 @@ const increasingLetterTrianglePattern = (n) => {
 };
 
 increasingLetterTrianglePattern(3);
+
+//
+//Q17
