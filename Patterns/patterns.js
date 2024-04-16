@@ -292,3 +292,6 @@ increasingLetterTrianglePattern(3);
 
 //
 //Q17
+// A B C
+// A B
+// A
