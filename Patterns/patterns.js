@@ -295,3 +295,18 @@ increasingLetterTrianglePattern(3);
 // A B C
 // A B
 // A
+const decreasingLetterTrianglePattern = (n) => {
+  let ascii = "A".charCodeAt(0);
+  let horizontalStr = "";
+  for (let i = n; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+      let letterToBePrinted = String.fromCharCode(ascii);
+      horizontalStr += letterToBePrinted;
+      ascii++;
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+};
+
+decreasingLetterTrianglePattern(3);
