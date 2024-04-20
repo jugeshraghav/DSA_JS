@@ -311,4 +311,51 @@ const decreasingLetterTrianglePattern = (n) => {
   }
 };
 
-decreasingLetterTrianglePattern(3);
+// decreasingLetterTrianglePattern(3);
+
+//Q18 Alpha-Ramp Pattern
+// A
+// B B
+// C C C
+function alphaRampPatter(n) {
+  let ascii = "A".charCodeAt(0);
+  let horizontalStr = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      horizontalStr = horizontalStr + String.fromCharCode(ascii);
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+    ascii = ascii + 1;
+  }
+}
+
+// alphaRampPatter(5);
+
+//Q19 Alpha-Hill Pattern
+//   A
+//  ABA
+// ABCBA
+
+// left space= n-i
+
+function alphaHill(n) {
+  let ascii = "A".charCodeAt(0);
+  let horizontalStr = "";
+  for (let i = 1; i <= n; i++) {
+    let space = n - i;
+
+    horizontalStr = " ".repeat(space);
+
+    for (let j = 1; j <= 2 * i - 1; j++) {
+      horizontalStr = horizontalStr + String.fromCharCode(ascii);
+
+      j === i || j > i ? (ascii = ascii - 1) : (ascii = ascii + 1);
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+    ascii = "A".charCodeAt(0);
+  }
+}
+
+alphaHill(5);
