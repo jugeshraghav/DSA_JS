@@ -284,11 +284,12 @@ const increasingLetterTrianglePattern = (n) => {
       ascii++;
     }
     console.log(horizontalStr);
+    ascii = "A".charCodeAt(0);
     horizontalStr = "";
   }
 };
 
-increasingLetterTrianglePattern(3);
+// increasingLetterTrianglePattern(3);
 
 //
 //Q17
@@ -305,6 +306,7 @@ const decreasingLetterTrianglePattern = (n) => {
       ascii++;
     }
     console.log(horizontalStr);
+    ascii = "A".charCodeAt(0);
     horizontalStr = "";
   }
 };
