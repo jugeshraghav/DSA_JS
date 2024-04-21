@@ -378,4 +378,59 @@ function alphaTriangle(n) {
     horizontalStr = "";
   }
 }
-alphaTriangle(5);
+// alphaTriangle(5);
+
+//Q21 Symmetric-Void Pattern
+// ******
+// **  **
+// *    *
+// *    *
+// **  **
+// ******
+
+function symmetricVoid(n) {
+  let horizontalStr = "";
+  //upper pattern
+  for (let i = 3; i >= 1; i--) {
+    let space = n - i;
+    //left stars
+    for (let j = 1; j <= i; j++) {
+      horizontalStr = horizontalStr + "*";
+    }
+
+    //space
+    for (let s = 1; s <= 2 * space; s++) {
+      horizontalStr = horizontalStr + " ";
+    }
+
+    //right stars
+    for (let j = 1; j <= i; j++) {
+      horizontalStr = horizontalStr + "*";
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+  //lower pattern
+  for (let i = 1; i <= n; i++) {
+    let space = n - i;
+    //left stars
+    for (let j = 1; j <= i; j++) {
+      horizontalStr = horizontalStr + "*";
+    }
+
+    //space
+    for (let s = 1; s <= 2 * space; s++) {
+      horizontalStr = horizontalStr + " ";
+    }
+
+    //right stars
+    for (let j = 1; j <= i; j++) {
+      horizontalStr = horizontalStr + "*";
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+}
+// symmetricVoid(3);
+
+//Q22
