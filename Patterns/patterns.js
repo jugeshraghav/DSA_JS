@@ -358,4 +358,24 @@ function alphaHill(n) {
   }
 }
 
-alphaHill(5);
+// alphaHill(5);
+
+//Q20 Alpha-Triangle Pattern
+// C
+// B C
+// A B C
+
+function alphaTriangle(n) {
+  let ascii = "A".charCodeAt(0) + n - 1;
+  let horizontalStr = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      horizontalStr = horizontalStr + String.fromCharCode(ascii);
+      ascii++;
+    }
+    console.log(horizontalStr);
+    ascii = ascii - i - 1;
+    horizontalStr = "";
+  }
+}
+alphaTriangle(5);
