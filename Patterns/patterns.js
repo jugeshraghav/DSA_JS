@@ -433,4 +433,40 @@ function symmetricVoid(n) {
 }
 // symmetricVoid(3);
 
-//Q22
+//Q22 Symmetric-Butterfly Pattern
+// *    *
+// **  **
+// ******
+// **  **
+// *    *
+
+//Q23 Hollow Rectangle Pattern
+// ***   i=1 j=1(*) j=2(*) j=3(*)
+// * *   i=2 j=1(*) j=2(" ") j=3(*)
+// ***   i=n j=1(*) j=2(*) j=3(*)
+function hollowRectangle(n) {
+  let horizontalStr = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (i === 1 || i === n) {
+        horizontalStr += "*";
+      } else {
+        if (j === 1 || j === n) {
+          horizontalStr += "*";
+        } else {
+          horizontalStr += " ";
+        }
+      }
+    }
+    console.log(horizontalStr);
+    horizontalStr = "";
+  }
+}
+hollowRectangle(5);
+
+//Q24 The Number Pattern
+// 3 3 3 3 3
+// 3 2 2 2 3
+// 3 2 1 2 3
+// 3 2 2 2 3
+// 3 3 3 3 3
