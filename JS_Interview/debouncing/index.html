@@ -3,16 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link ref="./style.css" stylesheet />
     <title>JS Interview</title>
   </head>
-  <body>
+  <body class="js_interview_container">
+    <h4>Debouncing</h4>
+    <div>
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="enter something"
+        oninput="getData()"
+      />
+      <p class=""></p>
+    </div>
+
     <input
       id="searchInput"
       type="text"
       placeholder="enter something"
       oninput="efficientGetData()"
     />
-
+    <hr />
     <script src="./debouncing.js"></script>
+    <script src="./throttling.js"></script>
   </body>
 </html>
