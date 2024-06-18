@@ -32,6 +32,17 @@ const throttle = (fn, delay) => {
   };
 };
 
+const throttle2 = (fn, delay) => {
+  let timer;
+  return function (...args) {
+    clickHandler();
+    if (timer) return;
+    timer = setTimeout(() => {
+      timer = undefined;
+      fn();
+    }, delay);
+  };
+};
 ///
 
-button.addEventListener("click", throttle(getData, 5000));
+button.addEventListener("click", throttle2(getData, 500));
